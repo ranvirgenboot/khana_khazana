@@ -7,14 +7,56 @@ import './Css/bootstrap.min.css'
 import './Css/owl.carousel.min.css'
 import './Css/css2'
 import './Css/css2(1)'
-import './Css/aos'
-
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import WithStyles from 'react-multi-carousel'
+import { animate, motion, useMotionValue, useTransform } from "motion/react"
+// import { useEffect } from "react"
 
 
 
 
 function Home() {
+const HTMLContent =()=> {
+    const count = useMotionValue(0)
+    const rounded = useTransform(() => Math.round(count.get()))
 
+    useEffect(() => {
+        const controls = animate(count, 500, { duration: 1 })
+        return () => controls.stop()
+    }, [])
+
+    return <motion.pre style={text}>{rounded}</motion.pre>
+}
+
+/**
+ * ==============   Styles   ================
+ */
+
+const text = {
+    fontSize: "40px",
+    alignItems : "center",
+    color: "white",
+}
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      partialVisibilityGutter: 40,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      partialVisibilityGutter: 30,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 30,
+    },
+  };
+  console.log(responsive);
+  
 
 
   return (
@@ -289,7 +331,7 @@ function Home() {
             {/* hero image for mobile view */}
             <div className="mobile_view">
               <img
-                src="./Css/hero_image.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737721213/K1_1_cmqrh9.png"
                 alt="image"
               />
             </div>
@@ -319,7 +361,7 @@ function Home() {
               <div className="usp_box">
                 <div className="usp_icon">
                   <img
-                    src="./Css/usp1.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235509/usp1_rhhpvz.webp"
                     alt="image"
                   />
                 </div>
@@ -337,7 +379,7 @@ function Home() {
               <div className="usp_box">
                 <div className="usp_icon">
                   <img
-                    src="./Css/usp2.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235509/usp2_wqdgie.webp"
                     alt="image"
                   />
                 </div>
@@ -355,16 +397,15 @@ function Home() {
               <div className="usp_box">
                 <div className="usp_icon">
                   <img
-                    src="./Css/usp3.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235508/usp3_rn4sey.webp"
                     alt="image"
                   />
                 </div>
-                <div className="usp_text">
-                  <span className="counter-value" data-count={3855}>
-                    3855
-                  </span>
-                  <span>+</span>
-                  <p> Restaurant Listings </p>
+                <div style={{height :"88px"}}>
+                  <br />
+                  <div style={{ display : 'flex', fontWeight:"600"}}>
+                  <HTMLContent /><span style={{fontSize : "32px", alignItems : "center"}}>+</span></div>
+                  <p style={{marginTop: "-30px"}}> Restaurant Listings </p>
                 </div>
               </div>
             </div>
@@ -373,7 +414,7 @@ function Home() {
               <div className="usp_box">
                 <div className="usp_icon">
                   <img
-                    src="./Css/usp4.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235508/usp4_ekqkfl.webp"
                     alt="image"
                   />
                 </div>
@@ -426,7 +467,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon1.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon1_lsc4hd.webp"
                   alt="image"
                 />
               </div>
@@ -445,7 +486,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon4.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon4_ffvoxk.webp"
                   alt="image"
                 />
               </div>
@@ -464,7 +505,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon2.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon2_dgnfjk.webp"
                   alt="image"
                 />
               </div>
@@ -486,7 +527,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon3.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon3_snxbb3.webp"
                   alt="image"
                 />
               </div>
@@ -505,7 +546,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon1.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon1_lsc4hd.webp"
                   alt="image"
                 />
               </div>
@@ -522,7 +563,7 @@ function Home() {
             >
               <div className="icon">
                 <img
-                  src="./Css/whyicon4.webp"
+                  src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235507/whyicon4_ffvoxk.webp"
                   alt="image"
                 />
               </div>
@@ -572,305 +613,106 @@ function Home() {
       </div>
       {/* container end */}
       {/* dishes list slide  */}
-      <div
-        className="dish_slider aos-init"
-        data-aos="fade-in"
-        data-aos-duration={1500}
-      >
-        <div
-          className="owl-carousel owl-theme owl-loaded owl-drag"
-          id="about_slider"
-        >
-          <div className="owl-stage-outer">
-            <div
-              className="owl-stage"
-              style={{
-                transition: "all  linear",
-                width: 4000,
-                transform: "translate3d(-482px, 0px, 0px)"
-              }}
-            >
-              <div
-                className="owl-item active"
-                style={{ width: 1250, marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737529425/new1_processed_svljqr.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463260/p5_gng2bv.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463260/p6_dlmzkr.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737635236/5_processed_ogfdqp.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item  active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p1-1_i8y3rm.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p2_qrkmul.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p3_qgvuqv.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737615752/1_processed_ms4ju6.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active "
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737615965/th_6__processed_2_l83aeh.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737529425/new1_processed_svljqr.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463260/p5_gng2bv.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463260/p6_dlmzkr.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737635236/5_processed_ogfdqp.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p1-1_i8y3rm.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p2_qrkmul.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737463259/p3_qgvuqv.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737615752/1_processed_ms4ju6.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className="owl-item active"
-                style={{ width: "auto", marginRight: 20 }}
-              >
-                <div className="item">
-                  <div className="dish_slides">
-                    <img
-                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1737615965/th_6__processed_2_l83aeh.png"
-                      alt="image"
-                      style={{ opacity: 1, width: 150, height: 150 }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button></div><div class="owl-dots disabled"></div></div> */}
-          {/* </div> */}
-          {/* app buttons */}
-          <div className="ctr_app_btn_block">
-            <ul className="app_btn">
-              <li>
-                <a href="">
-                  <img
-                    className="blue_img"
-                    src="./Css/googleplay.webp"
-                    alt="image"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <img
-                    className="blue_img"
-                    src="./Css/appstorebtn.webp"
-                    alt="image"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+     
+      {/* <Carousel
+  additionalTransfrom={0}
+  arrows
+  autoPlay
+  autoPlaySpeed={1}
+  centerMode={false}
+  className=""
+  containerClass="container-with-dots"
+  customTransition="all 1s linear"
+  dotListClass=""
+  draggable
+  focusOnSelect={false}
+  infinite
+  itemClass=""
+  keyBoardControl
+  minimumTouchDrag={80}
+  pauseOnHover
+  renderArrowsWhenDisabled={false}
+  renderButtonGroupOutside={false}
+  renderDotsOutside={false}
+  responsive={responsive}
+  rewind={false}
+  rewindWithAnimation={false}
+  rtl={false}
+  shouldResetAutoplay
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={2}
+  swipeable
+  transitionDuration={1000}
+>
+  <WithStyles
+    description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550133730-695473e544be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="React Carousel with Server Side Rendering Support – Part 1"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550167164-1b67c2be3973?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Fixing CSS load order/style.chunk.css incorrect in Nextjs"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550338861-b7cfeaf8ffd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="React Carousel with Server Side Rendering Support – Part 1"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550223640-23097fc71cb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="React Carousel with Server Side Rendering Support – Part 2"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550353175-a3611868086b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Fixing CSS load order/style.chunk.css incorrect in Nextjs"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550330039-a54e15ed9d33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1549737328-8b9f3252b927?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Fixing CSS load order/style.chunk.css incorrect in Nextjs"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1549833284-6a7df91c1f65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="React Carousel with Server Side Rendering Support – Part 1"
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1549985908-597a09ef0a7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+  <WithStyles
+    description="Appending currency sign to a purchase form in your e-commerce site using plain JavaScript."
+    headline="w3js.com - web front-end studio"
+    image="https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+  />
+</Carousel> */}
+
+
+
+
+
+
+
     </section>
     {/* Dishes-Section-end */}
     {/* Our Client section */}
@@ -894,7 +736,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res1.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235504/res1_vjee7i.webp"
                 alt="image"
               />
             </div>
@@ -906,7 +748,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res2.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res2_s2mnot.webp"
                 alt="image"
               />
             </div>
@@ -918,7 +760,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res3.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res3_eh903x.webp"
                 alt="image"
               />
             </div>
@@ -930,7 +772,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res4.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res4_ewgciq.webp"
                 alt="image"
               />
             </div>
@@ -942,7 +784,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res5.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res5_ekkbif.webp"
                 alt="image"
               />
             </div>
@@ -954,7 +796,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res6.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res6_dl4th1.webp"
                 alt="image"
               />
             </div>
@@ -966,7 +808,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res7.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res7_bw89in.webp"
                 alt="image"
               />
             </div>
@@ -978,7 +820,7 @@ function Home() {
               data-aos-duration={1500}
             >
               <img
-                src="./Css/res8.webp"
+                src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235503/res8_ym9elt.webp"
                 alt="image"
               />
             </div>
@@ -1081,7 +923,7 @@ function Home() {
               >
                 <div className="img">
                   <img
-                    src="./Food Delivery Mobile App Landing Page HTML Template_files/win2.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235500/win2_segz8u.webp"
                     alt="image"
                   />
                 </div>
@@ -1174,7 +1016,7 @@ function Home() {
                 >
                   <div className="img">
                     <img
-                      src="./Css/how1.webp"
+                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235499/how1_hpepcp.webp"
                       alt="image"
                     />
                   </div>
@@ -1196,7 +1038,7 @@ function Home() {
                 >
                   <div className="img">
                     <img
-                      src="./Css/how2.webp"
+                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235499/how2_a38irs.webp"
                       alt="image"
                     />
                   </div>
@@ -1217,7 +1059,7 @@ function Home() {
                 >
                   <div className="img">
                     <img
-                      src="./Css/how3.webp"
+                      src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235499/how3_nu2jxc.webp"
                       alt="image"
                     />
                   </div>
@@ -1242,7 +1084,7 @@ function Home() {
                     <a href="">
                       <img
                         className="blue_img"
-                        src="./Css/googleplay.webp"
+                        src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235510/googleplay_p8jsyj.webp"
                         alt="image"
                       />
                     </a>
@@ -1251,7 +1093,7 @@ function Home() {
                     <a href="">
                       <img
                         className="blue_img"
-                        src="./Css/appstorebtn.webp"
+                        src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235403/appstorebtn_c9rnht.webp"
                         alt="image"
                       />
                     </a>
@@ -1311,7 +1153,7 @@ function Home() {
                 <a href="">
                   <img
                     className="blue_img"
-                    src="./Css/black_google_play.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235497/black_google_play_k3phkx.webp"
                     alt="image"
                   />
                 </a>
@@ -1320,7 +1162,7 @@ function Home() {
                 <a href="">
                   <img
                     className="blue_img"
-                    src="./Css/black_appstore.webp"
+                    src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235497/black_appstore_w9qwjk.webp"
                     alt="image"
                   />
                 </a>
@@ -1360,14 +1202,14 @@ function Home() {
           <span className="element1">
             {" "}
             <img
-              src="./Css/element_white_3.webp"
+              src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235497/element_white_3_tjsyyy.webp"
               alt="image"
             />{" "}
           </span>
           <span className="element2">
             {" "}
             <img
-              src="./Css/element_white_4.webp"
+              src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235497/element_white_4_esgo39.webp"
               alt="image"
             />{" "}
           </span>
@@ -1381,7 +1223,7 @@ function Home() {
             data-aos-delay={100}
           >
             <img
-              src="./Css/customer-icon.webp"
+              src="https://res.cloudinary.com/dx9kqohjf/image/upload/v1738235496/customer-icon_v8cesz.webp"
               className="customer_icon"
               alt="image"
               style={{ backgroundColor: "white", marginTop: "-13px" }}
