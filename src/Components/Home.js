@@ -122,7 +122,7 @@ function Home() {
             {/* navigation bar */}
             <nav
               className="navbar navbar-expand-lg"
-              style={{ marginLeft: "-130px" }}
+              style={{ marginLeft: "-80px" }}
             >
               <a className="navbar-brand" href="">
                 <img
@@ -150,7 +150,7 @@ function Home() {
               <div
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
-                style={{ marginRight: "-140px" }}
+                style={{ marginRight: "-100px" }}
               >
                 <ul className="navbar-nav ml-auto">
                   {/* secondery menu start */}
@@ -1083,7 +1083,7 @@ function Home() {
                             style={{ width: 200, height: 90 }}
                           />
                         </div>
-                        <p
+                        <p 
                           style={{
                             marginTop: "-40px",
                             textAlign: "start",
@@ -1099,6 +1099,7 @@ function Home() {
                         </p>
                       </div>
                     </div>
+
                     {/* footer link 2 */}
                     <div className="col-lg-2 col-md-6 col-12">
                       <div className="links" style={{textAlign: "start"}}>
