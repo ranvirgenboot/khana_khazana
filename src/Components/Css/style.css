@@ -176,7 +176,7 @@ h6 {
 }
 
 .title_badge {
-    color: var(--primery);
+    color: #fb5b29;
     display: inline-block;
     padding: 2px 18px;
     border-radius: 100px;
@@ -735,17 +735,17 @@ header.fixed .navbar {
 /* hero slider heading h1 */
 .banner_section .banner_text h1 {
     font-size: 70px;
-    color: var(--primery);
+    color: #fb5b29;
     margin-bottom: 10px;
 }
 
 .banner_section .banner_text h1 span {
-    color: var(--primery);
+    color: #fb5b29;
 }
 
 .banner_section .banner_text .type-wrap span {
     font-weight: 700;
-    color: var(--white);
+    color: #fb5b29;
 }
 
 .banner_section .banner_text p {
@@ -940,7 +940,7 @@ header.fixed .navbar {
 
 /* --------- USP section ---------- */
 .usp_section{
-    background: var(--primery);
+    background: #fb5b29;
     padding: 70px 0;
     position: relative;
     z-index: 1;
@@ -1165,7 +1165,7 @@ iframe#youtubevideo {
 }
 
 .features_section .feature_detail .feature_box .data_block:hover {
-    border: solid 1px var(--primery);
+    border: solid 1px  #fb5b29;
     transition: .4s all;
 }
 
@@ -1454,7 +1454,7 @@ iframe#youtubevideo {
 .ctr_app_btn_block .app_btn li a {
     display: block;
     padding: 15px 35px;
-    background-color: var(--primery);
+    background-color:#fb5b29;
     border: none;
     position: relative;
     border-radius: 12px;
@@ -1462,7 +1462,7 @@ iframe#youtubevideo {
 }
 
 .ctr_app_btn_block .app_btn li a:hover {
-    background-color: var(--black);
+    background-color: black;
     transition: .4s all;
 }
 
@@ -1484,7 +1484,7 @@ iframe#youtubevideo {
 }
 
 .advance_feature_section .af_innner {
-    background: var(--white);
+    background:#faf9f5;
     max-width: 1370px;
     margin: 0 auto;
     border-radius: 40px;
@@ -1508,7 +1508,7 @@ iframe#youtubevideo {
 }
 
 .advance_feature_section .af_listing .listing_inner .af_block {
-    background-color: var(--secondary);
+    background-color:#faf9f5;
     padding:40px;
     border-radius: 20px;
     width: 30%;
@@ -1516,7 +1516,7 @@ iframe#youtubevideo {
 }
 
 .advance_feature_section .af_listing .listing_inner .af_block:hover {
-    border: solid 1px var(--primery);
+    border: solid 1px #fb5b29;
     transition: .4s all;
 }
 
@@ -2110,6 +2110,7 @@ iframe#youtubevideo {
     padding: 15px 30px;
     background-color: var(--white);
     border-radius: 12px;
+    border: solid 1px black;
 }
 
 .cta_section.new .cta_box .call_btn {
@@ -2117,12 +2118,20 @@ iframe#youtubevideo {
     margin-right: 15px;
     font-weight: 700;
     border-radius: 12px;
+    color: white;
+}
+
+
+.cta_section.new .cta_box .call_btn:hover {
+    
+    color:black
 }
 
 .cta_section.new .cta_box .email_btn:hover {
     background-color: var(--black);
     transition: all ease-in-out .5s;
     color: var(--white);
+    border: solid 2px black;
 }
 
 
@@ -2978,7 +2987,7 @@ footer .bottom_footer .developer_text a {
     z-index: 99;
     border-radius: 30px;
     overflow: hidden;
-    background-color: var(--primery);
+    background-color: #fb5b29;
 }
 
 .download_app .frame_img {

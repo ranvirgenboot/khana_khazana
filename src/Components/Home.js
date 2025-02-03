@@ -4,6 +4,9 @@ import "./Css/style.css";
 import "./Css/responsive.css";
 import "./Css/icofont.min.css";
 import "./Css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+
 import "./Css/owl.carousel.min.css";
 import "./Css/css2";
 import "./Css/css2(1)";
@@ -63,7 +66,7 @@ function Home() {
           name="description"
           content="Order your favorite meals with ease using our Food Delivery mobile app. Browse local restaurants, customize your order, and enjoy fast, reliable delivery straight to your door. Download now for convenient, delicious dining at your fingertips."
         />
-        <title>Khana Khazana</title>
+
         {/* icofont-css-link */}
         <link rel="stylesheet" href="./Css/icofont.min.css" />
         {/* Owl-Carosal-Style-link */}
@@ -153,7 +156,6 @@ function Home() {
                   {/* secondery menu start */}
                   <li className="nav-item has_dropdown">
                     <a className="nav-link" href="">
-                      {" "}
                       <button
                         style={{
                           backgroundColor: "#979a97",
@@ -166,8 +168,12 @@ function Home() {
                           borderRadius: 5,
                           width: 100,
                         }}
-                        onmouseover="this.style.backgroundColor='#fb5b29'"
-                        onmouseout="this.style.backgroundColor='#979a97'"
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = "#fb5b29")
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = "#979a97")
+                        }
                       >
                         Home
                       </button>
@@ -191,8 +197,12 @@ function Home() {
                           borderRadius: 5,
                           width: 100,
                         }}
-                        onmouseover="this.style.backgroundColor='#fb5b29'"
-                        onmouseout="this.style.backgroundColor='#979a97'"
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = "#fb5b29")
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = "#979a97")
+                        }
                       >
                         Merchants
                       </button>
@@ -216,8 +226,12 @@ function Home() {
                           borderRadius: 5,
                           width: 100,
                         }}
-                        onmouseover="this.style.backgroundColor='#fb5b29'"
-                        onmouseout="this.style.backgroundColor='#979a97'"
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = "#fb5b29")
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = "#979a97")
+                        }
                       >
                         Riders
                       </button>
@@ -237,8 +251,12 @@ function Home() {
                           borderRadius: 5,
                           width: 100,
                         }}
-                        onmouseover="this.style.backgroundColor='#fb5b29'"
-                        onmouseout="this.style.backgroundColor='#979a97'"
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = "#fb5b29")
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = "#979a97")
+                        }
                       >
                         About Us
                       </button>
@@ -293,8 +311,12 @@ function Home() {
                           borderRadius: 5,
                           width: 150,
                         }}
-                        onmouseover="this.style.backgroundColor='#fb5b29'"
-                        onmouseout="this.style.backgroundColor='black'"
+                        onMouseOver={(e) =>
+                          (e.target.style.backgroundColor = "#fb5b29")
+                        }
+                        onMouseOut={(e) =>
+                          (e.target.style.backgroundColor = "black")
+                        }
                       >
                         Click To Order !
                       </button>
@@ -455,14 +477,16 @@ function Home() {
               <div className="container">
                 {/* section title */}
                 <div
-                  className="aos-init"
+                  className="section_title aos-init"
                   data-aos="fade-up"
                   data-aos-duration={1500}
                   data-aos-delay={100}
                 >
                   {/* h2 */}
-                  <h2>Access over 1000+ dishes with just a tap</h2>
-                  <p>
+                  <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                    Access over 1000+ dishes with just a tap
+                  </h2>
+                  <p style={{ fontWeight: "semi-bold", fontSize: "1.4rem" }}>
                     Whatever your heart says, “Desi Swaad at Home Comfort,”
                     we’ve got you covered
                   </p>
@@ -486,7 +510,9 @@ function Home() {
                   data-aos-duration="1500"
                 >
                   <span class="title_badge">Our clients</span>
-                  <h2>Trusted by 2.5k+ restaurant </h2>
+                  <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                    Trusted by 2.5k+ restaurant{" "}
+                  </h2>
                 </div>
 
                 <ul class="client_list">
@@ -597,7 +623,9 @@ function Home() {
                 {/* section title */}
                 <div className="section_title">
                   <span className="title_badge">benefits</span>
-                  <h2>Delivering success for restaurants &amp; Foodies</h2>
+                  <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                    Delivering success for restaurants &amp; Foodies
+                  </h2>
                   <p>
                     Connecting restaurants with hungry customers, fostering
                     growth, convenience, and mouth-watering experiences that
@@ -622,7 +650,9 @@ function Home() {
                             />
                           </div>
                           <div className="text">
-                            <h4>Merchant Benefits</h4>
+                            <h4 style={{ fontWeight: "bold" }}>
+                              Merchant Benefits
+                            </h4>
                             <div>
                               <p>
                                 {" "}
@@ -688,7 +718,9 @@ function Home() {
                             />
                           </div>
                           <div className="text">
-                            <h4>Customer Benefits</h4>
+                            <h4 style={{ fontWeight: "bold" }}>
+                              Customer Benefits
+                            </h4>
                             <p>
                               Place orders in no time, customize to your taste,
                               and track in real-time. Our mobile app makes food
@@ -753,7 +785,9 @@ function Home() {
                 <div className="container">
                   {/* section title */}
                   <div className="section_title">
-                    <h2>How it Works</h2>
+                    <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                      How it Works
+                    </h2>
                     <p>
                       Order your favorite food in minutes! Enjoy a seamless
                       experience with our intuitive solution: browse, select,
@@ -781,7 +815,9 @@ function Home() {
                               />
                             </div>
                             <div className="text">
-                              <h5>Download App &amp; create a free account </h5>
+                              <h5 style={{ fontWeight: "bold" }}>
+                                Download App &amp; create a free account{" "}
+                              </h5>
                               <p>
                                 {" "}
                                 Get started with our food delivery app!
@@ -804,7 +840,10 @@ function Home() {
                               />
                             </div>
                             <div className="text">
-                              <h5> Order your favourite food in no time</h5>
+                              <h5 style={{ fontWeight: "bold" }}>
+                                {" "}
+                                Order your favourite food in no time
+                              </h5>
                               <p>
                                 Choose your favorite dish from the restaurant
                                 you love and place your order with just a few
@@ -826,7 +865,7 @@ function Home() {
                               />
                             </div>
                             <div className="text">
-                              <h5>
+                              <h5 style={{ fontWeight: "bold" }}>
                                 {" "}
                                 Get it delivered directly to your home,
                                 effortlessly{" "}
@@ -900,7 +939,9 @@ function Home() {
                         data-aos-delay={100}
                       >
                         <span className="title_badge">Download</span>
-                        <h2>Download app to enjoy 4500+ foods </h2>
+                        <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                          Download app to enjoy 4500+ foods{" "}
+                        </h2>
                         <p>
                           Download our mobile app for a seamless food ordering
                           experience, lightning-fast delivery, and incredible
@@ -993,23 +1034,23 @@ function Home() {
                         style={{ backgroundColor: "white", marginTop: "-13px" }}
                       />
                       {/* h2 */}
-                      <h3 style={{ color: "black" }}>Need support?</h3>
+                      <h3 style={{ color: "black" , fontSize: "2rem" , fontWeight:"bold" }}>Need support?</h3>
                       {/* p */}
                     </div>
                   </div>
                   {/* cta buttons */}
-                  <div className="right">
-                    <div className="btn_block ">
+                  <div class="right">
+                    <div class="btn_block ">
                       <a
                         href="tel:3489390172"
-                        className="btn puprple_btn aos-init aos-animate call_btn"
+                        class="btn puprple_btn aos-init aos-animate call_btn"
                       >
                         {" "}
                         Call us now
                       </a>
                       <a
                         href="mailto:Khanakhazana@gmail.com"
-                        className="btn aos-init aos-animate email_btn"
+                        class="btn aos-init aos-animate email_btn"
                       >
                         {" "}
                         Email us
@@ -1042,7 +1083,13 @@ function Home() {
                             style={{ width: 200, height: 90 }}
                           />
                         </div>
-                        <p style={{ marginTop: "-40px" }}>
+                        <p
+                          style={{
+                            marginTop: "-40px",
+                            textAlign: "start",
+                            marginLeft: 180,
+                          }}
+                        >
                           <br />
                           Location: Khana Khazana
                           <br />
@@ -1054,9 +1101,9 @@ function Home() {
                     </div>
                     {/* footer link 2 */}
                     <div className="col-lg-2 col-md-6 col-12">
-                      <div className="links">
+                      <div className="links" style={{textAlign: "start"}}>
                         <h5>Quick Links</h5>
-                        <ul>
+                        <ul style={{marginLeft: "-20px"}} >
                           <li>
                             <a href="">Home</a>
                           </li>
@@ -1084,6 +1131,7 @@ function Home() {
                         </ul>
                       </div>
                     </div>
+
                     {/* footer link 3 */}
                     <div className="col-lg-2 col-md-6 col-12">
                       <div className="links">
@@ -1093,6 +1141,7 @@ function Home() {
                             display: "flex",
                             gap: 10,
                             alignItems: "center",
+                            marginLeft: 30,
                           }}
                         >
                           {/* Instagram Icon */}
@@ -1103,8 +1152,14 @@ function Home() {
                               display: "inline-block",
                               transition: "all 0.3s ease",
                             }}
-                            onmouseover="this.children[0].style.filter='invert(1)'"
-                            onmouseout="this.children[0].style.filter='invert(0)'"
+                            onMouseOver={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(1)")
+                            }
+                            onMouseOut={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(0)")
+                            }
                           >
                             <img
                               src="https://img.icons8.com/?size=100&id=Iatym1CIDVkh&format=png&color=000000"
@@ -1119,8 +1174,14 @@ function Home() {
                               display: "inline-block",
                               transition: "all 0.3s ease",
                             }}
-                            onmouseover="this.children[0].style.filter='invert(1)'"
-                            onmouseout="this.children[0].style.filter='invert(0)'"
+                            onMouseOver={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(1)")
+                            }
+                            onMouseOut={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(0)")
+                            }
                           >
                             <img
                               src="https://img.icons8.com/?size=100&id=437&format=png&color=000000"
@@ -1135,8 +1196,14 @@ function Home() {
                               display: "inline-block",
                               transition: "all 0.3s ease",
                             }}
-                            onmouseover="this.children[0].style.filter='invert(1)'"
-                            onmouseout="this.children[0].style.filter='invert(0)'"
+                            onMouseOver={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(1)")
+                            }
+                            onMouseOut={(e) =>
+                              (e.currentTarget.children[0].style.filter =
+                                "invert(0)")
+                            }
                           >
                             <img
                               src="https://img.icons8.com/?size=100&id=118491&format=png&color=000000"
@@ -1146,6 +1213,7 @@ function Home() {
                         </div>
                       </div>
                     </div>
+
                     {/* footer link 4 */}
                     <div className="col-lg-3 col-md-6 col-12">
                       <h5>Download Links</h5>
@@ -1156,7 +1224,7 @@ function Home() {
                           alignItems: "center",
                           gap: 20,
                           marginTop: "-20px",
-                          marginLeft: "-60px",
+                          marginLeft: "40px",
                         }}
                       >
                         {/* First Image of Google */}
@@ -1182,7 +1250,7 @@ function Home() {
                           justifyContent: "center",
                           alignItems: "center",
                           gap: 30,
-                          marginLeft: "-60px",
+                          marginLeft: "40px",
                         }}
                       >
                         {/* Second Image of Google */}

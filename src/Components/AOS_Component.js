@@ -15,35 +15,34 @@ const AOS_Component = () => {
     <div className="container">
       {/* section title */}
       <div
-            className="aos-init"
-            data-aos="fade-up"
-            data-aos-duration={1000}
-            data-aos-delay={100}
-      >
-        {/* h2 */}
-        <h2>Why Choose Us</h2>
-        {/* p */}
-        <h5>
-          Bringing The True Flavors Of Authentic Indian Cuisine To You
-        </h5>
-        <p style={{ textAlign: "center" }}>
-          Khana Khazana brings India’s authentic flavor to Paris and
-          all in France. Our advanced food delivery platform delivers
-          authentic Indian cuisine right to your doorstep, offering
-          everything from curries to biryanis with a fragrant aroma.
-          We’ve got a passionate team that aims to achieve culinary
-          excellence and make Indian food accessible to all.
-        </p>
-      </div>
+  className="section_title aos-init"
+  data-aos="fade-up"
+  data-aos-duration={1500}
+  data-aos-delay={100}
+>
+  {/* h2 */}
+  <h1 style={{ fontWeight: "bold", fontSize: "3rem" }}>Why Choose Us</h1>
+  {/* p */}
+  <h5 style={{ fontWeight: "semi-bold", fontSize: "1.7rem" }}>Bringing The True Flavors Of Authentic Indian Cuisine To You</h5>
+  <p style={{ textAlign: "center" }}>
+    Khana Khazana brings India’s authentic flavor to Paris and all in France.
+    Our advanced food delivery platform delivers authentic Indian cuisine right
+    to your doorstep, offering everything from curries to biryanis with a
+    fragrant aroma. We’ve got a passionate team that aims to achieve culinary
+    excellence and make Indian food accessible to all.
+  </p>
+</div>
+
       <div className="feature_detail">
         {/* side element left  */}
         {/* feature box left */}
         <div className="left_data feature_box">
           {/* feature box */}
           <div
-            className="data_block color1 aos-init"
+            className="data_block  aos-init"
             data-aos="fade-right"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
@@ -63,6 +62,7 @@ const AOS_Component = () => {
             className="data_block color1 aos-init"
             data-aos="fade-right"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
@@ -83,6 +83,7 @@ const AOS_Component = () => {
             className="data_block color2 aos-init"
             data-aos="fade-right"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
@@ -106,6 +107,7 @@ const AOS_Component = () => {
             className="data_block color3 aos-init"
             data-aos="fade-left"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
@@ -125,6 +127,7 @@ const AOS_Component = () => {
             className="data_block color3 aos-init"
             data-aos="fade-left"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
@@ -142,6 +145,7 @@ const AOS_Component = () => {
             className="data_block color4 aos-init"
             data-aos="fade-left"
             data-aos-duration={1500}
+            style={{backgroundColor: "#faf9f5"}}
           >
             <div className="icon">
               <img
