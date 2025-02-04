@@ -17,7 +17,7 @@ const AOS_Component = () => {
       <div
   className="section_title aos-init"
   data-aos="fade-up"
-  data-aos-duration={1500}
+  data-aos-duration={2000}
   data-aos-delay={100}
 >
   {/* h2 */}

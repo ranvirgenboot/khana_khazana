@@ -43,6 +43,28 @@ const CarouselComponent = ({ deviceType }) => {
 
   return (
     <>
+  
+  <div className="container">
+                {/* section title */}
+                <div
+                  className="section_title aos-init"
+                  data-aos="fade-up"
+                  data-aos-duration={1500}
+                  data-aos-delay={100}
+                >
+                  {/* h2 */}
+                  <h2 style={{ fontWeight: "bold", fontSize: "3rem" }}>
+                    Access over 1000+ dishes with just a tap
+                  </h2>
+                  <p style={{ fontWeight: "semi-bold", fontSize: "1.4rem" }}>
+                    Whatever your heart says, “Desi Swaad at Home Comfort,”
+                    we’ve got you covered
+                  </p>
+                  {/* p */}
+                </div>
+              </div>
+
+
       <Carousel
     
         responsive={responsive}
