@@ -10,17 +10,20 @@ function Header() {
             <nav
                 className={`navbar navbar-expand-lg `}
                 style={{
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "75px",
-                  backgroundColor: "rgba(255, 255, 255, 0.7)", 
-                  backdropFilter: "blur(8px)", 
-                  WebkitBackdropFilter: "blur(8px)",
-                  transition: "transform 0.3s ease-in-out",
-                
-                }}
+                    position: "fixed",
+                    top: 0,
+                    left: "50%", 
+                    transform: "translateX(-50%)", 
+                    width: "100%",
+                    maxWidth: "1800px",
+                    height: "70px",
+                    backgroundColor: "rgba(255, 255, 255, 0.7)",
+                    backdropFilter: "blur(8px)", 
+                    WebkitBackdropFilter: "blur(10px)",
+                    transition: "transform 0.3s ease-in-out",
+                    zIndex: 1000, 
+                    padding: "0 20px", 
+                  }}
           
             >
               <a className="navbar-brand" href="">
@@ -49,7 +52,7 @@ function Header() {
               <div
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
-                style={{ marginLeft: "40rem" }}
+                style={{ marginLeft: "35rem" }}
               >
                 <ul className="navbar-nav ml-auto">
                   {/* secondery menu start */}
