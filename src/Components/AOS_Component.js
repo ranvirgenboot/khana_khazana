@@ -9,6 +9,7 @@ const AOS_Component = () => {
     });
   }, []);
 
+  
   return (
     <section className="row_am features_section" id="why_sec">
     {/* container start */}
@@ -17,6 +18,7 @@ const AOS_Component = () => {
       <div
   className="section_title aos-init"
   data-aos="fade-up"
+  
   data-aos-duration={2000}
   data-aos-delay={100}
 >

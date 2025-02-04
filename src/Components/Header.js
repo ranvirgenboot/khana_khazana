@@ -49,7 +49,7 @@ function Header() {
               <div
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
-                style={{ marginLeft: "48rem" }}
+                style={{ marginLeft: "40rem" }}
               >
                 <ul className="navbar-nav ml-auto">
                   {/* secondery menu start */}
