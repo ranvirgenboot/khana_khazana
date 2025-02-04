@@ -28,17 +28,10 @@ import Download from "./Download";
 import Count from "./Count";
 import Support from "./Support";
 
-
 function Home() {
-  
-  
-
-  
-  
   return (
     <div>
       <>
-       
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -97,29 +90,22 @@ function Home() {
           <div id="loader" />
         </div>
         {/* Header Start */}
-    
 
-       <Header/>
+        <Header />
 
         <>
+          {/* Banner Section Start */}
 
-        {/* Banner Section Start */}
-
-
-        <Banner/>
-
-
+          <Banner />
 
           {/* Banner-Section-end */}
 
           {/* Page Wraper */}
 
-
           <div className="page_wrapper" style={{ overflow: "hidden" }}>
             {/* usp start */}
 
-
-           <Count/>
+            <Count />
 
             {/* Features-Section-Start */}
 
@@ -129,33 +115,30 @@ function Home() {
             {/* Dishes-Section-Start */}
             <section className="row_am dishes_section">
               {/* container start */}
-           
+
               {/* container end */}
               {/* dishes list slide  */}
 
               <CarouselComponent />
-
             </section>
             {/* Dishes-Section-end */}
 
             {/* Our Client section */}
 
-           <Client/>
+            <Client />
           </div>
 
           <>
-           
+            {/* Benefits */}
 
-           {/* Benefits */}
-
-               <Benefits/>
+            <Benefits />
 
             {/* win win Section End */}
 
             {/* How it Works Section Start */}
 
-         <HowItWorks/>
-          
+            <HowItWorks />
+
             {/* How it Works Section End */}
 
             {/* success stories Section Start */}
@@ -164,20 +147,18 @@ function Home() {
 
             {/* App-Download-Section-Start */}
 
+            <Download />
 
-                <Download/>
-            
             {/* App-Download-Section-end */}
 
             {/* Blog Section Start */}
             {/* Blog Section End */}
 
-
             {/* call to action */}
 
-         <Support/>
+            <Support />
 
-         <Footer/>
+            <Footer />
           </>
         </>
       </>

@@ -1,15 +1,11 @@
-import React , {useState , useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
- 
-function HTMLContent({ last }) {  
-
-   
+function HTMLContent({ last }) {
   const text = {
     fontSize: "40px",
     alignItems: "center",
     color: "white",
   };
-
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (value) => Math.round(value));
@@ -34,8 +30,11 @@ function HTMLContent({ last }) {
     return () => controls.stop();
   }, [scrollPos]); // Depend only on scrollPos
 
-  return <motion.pre style={{ fontSize: "24px", fontWeight: "bold" }}>{rounded}</motion.pre>;
-};
+  return (
+    <motion.pre style={{ fontSize: "24px", fontWeight: "bold" }}>
+      {rounded}
+    </motion.pre>
+  );
+}
 
-
-export default HTMLContent
+export default HTMLContent;
